@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="252.61" tests="9" skipped="0" failures="1" errors="0" timestamp="2025-08-22T03:45:42.242775900Z">
+<testcase classname="eBay Login" name="User logs in with valid credentials" time="36.273">
+<system-out><![CDATA[
+Given the user navigates to the eBay login page.............................passed
+When the user enters their email and password...............................passed
+Then the user should be signed in successfully..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Multiple item search on eBay" name="User searches for multiple items one by one" time="18.527">
+<system-out><![CDATA[
+Given the user is on the eBay homepage......................................passed
+When the user searches for "Watch","Phone","Shoes"..........................passed
+Then the search results should be displayed for each item...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add item to cart and then remove it" name="User adds an item to cart and deletes it" time="28.332">
+<system-out><![CDATA[
+Given the user is on the eBay homepage to add and remove item...............passed
+When the user adds and removes an item from the cart........................passed
+Then the cart should not contain the item...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Update address and name in eBay profile" name="User updates profile address and middle name" time="43.179">
+<failure type="org.openqa.selenium.ElementNotInteractableException" message="Element &lt;a href=&quot;https://accountsettings.ebay.com/uas&quot;&gt; could not be scrolled into view
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [ca2328c4-e1b0-4207-9bed-e1362a0ae717, clickElement {id=b00ebca0-8e58-464c-93bf-653324455480}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19332, moz:profile: C:\Users\ASUS\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (ca2328c4-e1b0-4207-9bed-e1362a0ae717)] -&gt; css selector: a[_sp=&quot;m570.l3399&quot;]]
+Session ID: ca2328c4-e1b0-4207-9bed-e1362a0ae717">
+<![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <a href="https://accountsettings.ebay.com/uas"> could not be scrolled into view
+Build info: version: '4.34.0', revision: '2a4c61c498'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [ca2328c4-e1b0-4207-9bed-e1362a0ae717, clickElement {id=b00ebca0-8e58-464c-93bf-653324455480}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0.3, moz:accessibilityChecks: false, moz:buildID: 20250806102122, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19332, moz:profile: C:\Users\ASUS\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (ca2328c4-e1b0-4207-9bed-e1362a0ae717)] -> css selector: a[_sp="m570.l3399"]]
+Session ID: ca2328c4-e1b0-4207-9bed-e1362a0ae717
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at ebay_tests.Cucumberpageclass.changeAddressAndName(Cucumberpageclass.java:111)
+	at ebay_tests.ProfileUpdate.user_updates_address_and_name(ProfileUpdate.java:26)
+	at ✽.the user updates address and name in account settings(file:///C:/Users/ASUS/Desktop/JAVA_Selenium/Cucumber_BDD/src/test/resources/ebay_features/04_ProfileUpdate.feature:5)
+]]>
+</failure>
+<system-out><![CDATA[
+Given the user is logged in to update address...............................passed
+When the user updates address and name in account settings..................failed
+Then the updated profile information should be saved........................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Hover over and explore top categories" name="User explores different categories" time="20.332">
+<system-out><![CDATA[
+Given the user is on the eBay homepage to explore categories................passed
+When the user hovers over different categories..............................passed
+Then the subcategories should be displayed..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search using all categories option" name="User selects &quot;All Categories&quot; and searches" time="16.697">
+<system-out><![CDATA[
+Given the user is on eBay homepage to shop by all categories................passed
+When the user selects all categories and performs search....................passed
+Then search results from all categories should appear.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change language or country on eBay" name="User changes the country to Italy" time="52.62">
+<system-out><![CDATA[
+Given the user is on the eBay homepage to change language...................passed
+When the user scrolls down and changes country to Italy.....................passed
+Then the site should switch to Italian version..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="check daily deals" name="to check the daily deals" time="15.047">
+<system-out><![CDATA[
+Given open the eBay website in uur browserrr................................passed
+When click on daily deals...................................................passed
+Then daily deals page is opened.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Footer links" name="Checking footer facebook link" time="20.695">
+<system-out><![CDATA[
+Given open in desfault browser..............................................passed
+When click on facebook and check working....................................passed
+Then successful footer working..............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
